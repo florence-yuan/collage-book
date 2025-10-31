@@ -1,16 +1,129 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Image from "astro/components/Image.astro";
+import collage1 from "../assets/images/collages/1st_collage.png"
+import collage2 from "../assets/images/collages/2nd_collage.png"
+import collage3 from "../assets/images/collages/3rd_collage.png"
+
+/* Add effect: text fades to black while scrolling */
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle="Beginnings">
+	<article class="story">
+		<div class="header">
+			<!-- <div id="img1" /> -->
+			 <p class="header__desc">A collage book</p>
+			<h1>A Flagrant Myth
+			</h1>
+		</div>
+		<!-- <img src="../assets/images/collages/1st_collage.png" alt="" /> -->
+		<div class="cover-gallery">
+			<Image src={collage1} alt="surrealist #1" id="img1" />
+			<Image src={collage2} alt="surrealist #2" id="img2" />
+			<Image src={collage3} alt="surrealist #3" id="img3" />
+		</div>
+		<div class="para">
+			<div>
+				<p>Our story starts in the middle, with a disappearance.</p>
+				<p>A slow decay that pulls brick from brick and the white paint peeling from walls like the fingers of a ghost.  Shutters fall on the shops, houses crumble like dust.  People turn into creatures half-human, half-goat.  They defecate into the hollows of blasted trees, they gnaw at the grass that springs from ruined walls.</p>
+				<p>As the days pass they are no longer visible; they have dissolved into <a href={import.meta.env.BASE_URL + "/poem"}>a primeval music...</a></p>
+			</div>
+		</div>
+		<div class="para">
+			<div>
+				<p class="large">TEN YEARS BEFORE, near the beginning</p>
+				<a href={import.meta.env.BASE_URL + "/news_clippings"}>News clippings and documents</a>
+			</div>
+		</div>
+		<div class="para">
+			<div>
+				<p class="large">TEN YEARS LATER, near the end</p>
+				<a href={import.meta.env.BASE_URL + "/urban_explorer"}>Transcript from an unreleased tape made by an urban explorer</a>
+			</div>
+		</div>
+	</article>
+</BaseLayout>
+
+<style>
+	html {
+		/* background-color: #93ac98; */
+	}
+	a {
+		/* color: var(--teal); */
+	}
+
+	article.story {
+		min-height: 100vh;
+		background-size: cover;
+		background-position: center top;
+		padding-bottom: 6rem;
+	}
+
+	.header {
+		margin: 4rem 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.header__desc {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 500;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+	}
+
+	.cover-gallery {
+		display: flex;
+		justify-content: left;
+		/* margin-left: 10vw; */
+		gap: 4vw;
+		align-items: center;
+		margin-bottom: 3rem;
+	}
+
+	h1 {
+		position: relative;
+		font-family: "Italiana", sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.01rem;
+		font-size: 10vw;
+		margin: 0 var(--body-padding);
+	}
+
+	img {
+		max-width: 90%;
+		width: 35rem;
+		height: auto;
+		filter: brightness(1.2) contrast(0.8) sepia(.1);
+		/* mix-blend-mode:lighten; */
+	}
+
+	/* #img1 {
+		width: 30rem;
+	}
+
+	#img2 {
+		width: 30rem;
+	} */
+
+	.para {
+		width: 50rem;
+		font-family: 'Newsreader', serif;
+	}
+
+	.para .large {
+		font-weight: 500;
+		font-family: 'Montserrat', sans-serif;
+		letter-spacing: 0.1rem;
+	}
+
+	p {
+		color: rgb(0, 0, 0);
+		color: #e2a9cc;
+		color: black;
+	}
+</style>

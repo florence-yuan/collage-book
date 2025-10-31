@@ -1,0 +1,149 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout pageTitle="Beginnings">
+    <article class="story">
+        <h1>News clippings</h1>
+        <div class="pic-wrapper">
+            <h2>A demolition & a myth: mass evacuation and mass hysteria?</h2>
+            <div id="pic"></div>
+            <p>A brief timeline</p>
+        </div>
+        <div class="para">
+            <div class="box">In the Official Local Newspaper</div>
+            On the morning of Jan 9th 20--, the Department for Property Development
+            announced the planned demolition of X—Li before the end of this year,
+            to pave the way for the construction of a brand new residential complex
+            in cooperation with the property developer H--. Residents can expect
+            an ultimatum of mid-September to vacate from the neighborhood, and are
+            advised to begin arrangements beforehand. Financial compensation will
+            duly follow. Department spokesperson Mr. P--, in his speech in front
+            of the local property committee today, emphasized order and reason for
+            this upcoming project, stressing that residents should under no circumstance
+            “cause a panic” or “stir up unnecessary conflicts” that in any way obstruct
+            due procedures.
+        </div>
+        <div class="para">
+            <div class="box">In a Local Gossip News Column</div>
+            In recent weeks, our editor has received dozens of letters from our
+            readers and concerned locals that pertain to sightings of half-human,
+            half-goat creatures in the neighborhood of X—Li. Descriptions vary widely,
+            from “an ugly, scabby thing with monstrous eyes” to “[a creature] I would
+            have mistaken for a benign elderly man, had I not seen a pair of goat
+            legs (hideously hairy) projecting from its hindquarters.” Furthermore,
+            this hybrid creature has been variously reported to appear during daytime
+            and nighttime, and its feeding habits compared variously to a herbivore
+            and a scavenger. One point of consistency our editor has been able to
+            glean from these reports is that the creature seems to appear and disappear
+            at will, and to evaporate in the darkest shadows and the brightest sunlight
+            alike. These mysterious characteristics, combined with recent developments
+            in the area, have served to inflame rumors and discussion surrounding
+            their behavior and origins. A connection has also been drawn to the recent
+            abrupt disappearances of several residents, who have been found virtually
+            unreachable by their concerned friends and neighbors. Can this connection
+            be valid? Or is it only the product of mass paranoia? We have contacted
+            the local government for comment, but have yet to receive a response.
+        </div>
+        <div class="para">
+            <div class="box">Redacted official document:</div>
+            Specimens of __________, speculated to be a variation of __________;
+            origin unknown. Threat assessment _________________________. _________
+            unknown, _________ unknown. Citizen caution advised? ______________.
+            Imperative to manage unstable attitudes and flagrant rumors. Imperative
+            to issue missive on effective management _______________.
+        </div>
+        <!-- <div class="postbox" /> -->
+    </article>
+
+    <style>
+        /*     html {
+        background-image: url(../assets/images/static_bg.JPG);
+        background-color: black;
+    } */
+
+        h1 {
+            font-size: 4rem;
+            /* color: white; */
+            grid-row: 1;
+            grid-column: 1 / -1;
+        }
+
+        @keyframes picDecay {
+            0% {
+                background-position-x: 0%;
+            }
+            20% {
+                background-position-x: 25%;
+            }
+            40% {
+                background-position-x: 50%;
+            }
+            60% {
+                background-position-x: 75%;
+            }
+            80% {
+                background-position-x: 100%;
+            }
+            100% {
+                background-position-x: 100%;
+            }
+        }
+
+        .pic-wrapper {
+
+        }
+
+        .pic-wrapper p {
+            margin-top: 1em;
+        }
+
+        .pic-wrapper h2 {
+            line-height: 1.2;
+            margin: 1em 0 0.5em;
+            text-transform: uppercase;
+        }
+
+        #pic {
+            max-width: 100%;
+            aspect-ratio: 800 / 533;
+            background-image: url(../assets/images/house_decay_sprite.JPG);
+            background-position-x: 0%;
+            background-size: 500%;
+
+            animation-name: picDecay;
+            animation-timing-function: steps(1);
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+        }
+
+        .story {
+            min-height: 100vh;
+            display: grid;
+            width: 60rem;
+            max-width: 90%;
+            margin: 6rem auto;
+            grid-template-columns: 3fr 2fr;
+            grid-template-rows: max-content max-content max-content;
+            /* align-items: center; */
+            gap: 1rem 1.5rem;
+        }
+
+        .para {
+            margin: 0;
+            background: none;
+            /* color: white; */
+            max-width: 100%;
+        }
+
+        .para .box {
+            padding: 0.3em 0.5em 0.2em;
+            margin-bottom: 1em;
+            border: 1px solid;
+            font-size: 1.25em;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style></BaseLayout
+>

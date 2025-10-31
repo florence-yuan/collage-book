@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Image from "astro/components/Image.astro";
+import collage1 from "../assets/images/collages/1st_collage.png"
+
+/* Add effect: text fades to black while scrolling */
+
+---
+
+<BaseLayout pageTitle="Beginnings">
+	<article class="story">
+		<div class="header">
+			<!-- <div id="img1" /> -->
+			 <p>A collage book</p>
+			<h1 id="heading1">A Flagrant Myth
+			</h1>
+		</div>
+		<!-- <img src="../assets/images/collages/1st_collage.png" alt="" /> -->
+		<Image src={collage1} alt="surrealist #1"/>
+		<div class="para">
+			<div>
+				<p>Our story starts in the middle, with a disappearance.</p>
+				<p>A slow decay that pulls brick from brick and the white paint peeling from walls like the fingers of a ghost.  Shutters fall on the shops, houses crumble like dust.  People turn into creatures half-human, half-goat.  They defecate into the hollows of blasted trees, they gnaw at the grass that springs from ruined walls.</p>
+				<p>As the days pass they are no longer visible; they have dissolved into <a href="/poem">a primeval music...</a></p>
+			</div>
+		</div>
+		<div class="para">
+			<div>
+				<p class="large">TEN YEARS BEFORE, near the beginning</p>
+				<a href="/news_clippings">News clippings and documents</a>
+			</div>
+		</div>
+		<div class="para">
+			<div>
+				<p class="large">TEN YEARS LATER, near the end</p>
+				<a href="/urban_explorer">Transcript from an unreleased tape made by an urban explorer</a>
+			</div>
+		</div>
+	</article>
+</BaseLayout>
+
+<style>
+	html {
+		/* background-color: var(--mauve); */
+	}
+
+	a {
+		/* color: var(--teal); */
+	}
+
+	article.story {
+		min-height: 100vh;
+		/* background-image: url(../assets/images/index_bg.jpg); */
+		background-size: cover;
+		background-position: center top;
+		padding-bottom: 6rem;
+	}
+
+	.header {
+		margin-bottom: 20vh;
+	}
+
+	.para {
+		font-family: 'Graphik';
+	}
+
+	.para .large {
+		font-size: 2em;
+	}
+
+	#img1 {
+/* 		position: absolute;
+		top: 33vh;
+		left: 0; */
+		position: relative;
+		top: 30vh;
+		margin-bottom: -100vh;
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		background-image: url(../assets/images/cover_img_gray.png);
+		background-size: 15%;
+		/* mask-image: linear-gradient(to bottom, black, 50%, rgba(0, 0, 0, 0)); */
+		/* background-repeat: repeat-x; */
+		z-index: 1;
+	}
+
+	h1 {
+		position: relative;
+		font-family: "Belarus";
+		text-transform: uppercase;
+		letter-spacing: 0.01rem;
+		/* color: var(--teal); */
+		font-size: 13vw;
+		margin: 0 var(--body-padding);
+		/* filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.2))
+		drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.1))
+		drop-shadow(0px 40px 0px rgba(0, 0, 0, 0.05)); */
+	}
+
+	h1 > span {
+	}
+
+	#heading1 {
+		margin-top: calc(4rem + 4vh);
+		z-index: 0;
+	}
+
+	#heading2 {
+		/* color: white; */
+		z-index: 10;
+	}
+
+	.numbering {
+		display: none;
+		font-size: calc(30rem + 15vw);
+		line-height: 1;
+		color: black;
+		font-family: "Belarus";
+		user-select: none;
+		z-index: 10;
+	}
+
+	p {
+		color: rgb(0, 0, 0);
+		color: #e2a9cc;
+		color: black;
+/* 		font-size: 1.5rem;
+		font-style: italic;
+		font-family: serif;
+		font-weight: bold;
+		text-transform: uppercase; */
+	}
+</style>

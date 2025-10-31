@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout pageTitle="Beginnings">
+	<article class="story">
+        <div id="postcard">
+            <div id="postcard__left">
+            <pre id="poem">
+Now and then it comes to me -
+This secret flower of mythology -
+Half entwined with long grapevines
+that sit and weep their golden wines
+Crucify me then - I sacrifice freely,
+and I dream as the Romantics dreamed,
+at the center of the world in a drunken frenzy,
+all disheveled, my heart medieval
+<a href={import.meta.env.BASE_URL + "/monologue"}>I speak to myself</a>
+        </pre>
+    </div>
+            <div id="postcard__right">
+                <div id="stamp" />
+            </div>
+    </div>
+    </article>
+</BaseLayout>
+
+<style>
+    article.story {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url(../assets/images/poem_img.jpg);
+        background-size: 30rem;
+        background-repeat: no-repeat;
+        background-position: 10% 10%;
+    }
+
+    #postcard {
+        padding: 1em;
+        display: flex;
+        width: 45rem;
+        height: 30rem;
+        background-image: url(../assets/images/paper_texture.avif);
+        background-size: 40%;
+    }
+
+    #postcard__left {
+        display: flex;
+        height: 100%;
+        padding: 1em;
+        gap: 2rem;
+        /* border-right: 1px solid rgb(39, 39, 39); */
+    }
+
+    #postcard__left::after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 100%;
+        background-image: url(../assets/images/wave.png);
+        background-size: contain;
+        /* border-right: 1px solid; */
+    }
+
+    #postcard__right {
+        width: 100%;
+    }
+
+    #stamp {
+        margin: 1em 1em 0 auto;
+        width: 4rem;
+        height: 5rem;
+        border: 1px solid;
+    }
+</style>

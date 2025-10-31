@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/index.css";
+import Panel1 from "../components/panels/panel1.astro";
+import Panel3 from "../components/panels/panel3.astro";
+import { glob } from "astro/loaders";
+
+// const panels = await import.meta.glob("../components/panels/panel*.astro", {eager: true});
+
+// console.log(panels)
+const curLinks = [
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{ comp: Panel3 },
+	{},
+	{},
+	{},
+	{ comp: Panel1 },
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+];
+---
+
+<BaseLayout pageTitle="Beginnings">
+	<div class="viewport">
+		<div class="grid">
+			{
+				curLinks.map((obj, i) =>
+					obj.comp ? (
+						<div class="grid__panel">
+							{<obj.comp />}
+						</div>
+					) : (
+						<div class="grid__panel" />
+					),
+				)
+			}
+		</div>
+	</div>
+</BaseLayout>
+
+<script>
+	import "../scripts/index.js"
+</script>

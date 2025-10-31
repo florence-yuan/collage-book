@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    box-sizing: border-box;
+    --dark-red: rgb(221, 35, 35);
+    --body-padding: calc(3vw + 3rem);
+
+    --mauve: #be4f94;
+    --teal: rgb(16, 207, 166);
+}
+
+::selection {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+    font-family: 'Belarus';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Belarus'), url('../assets/fonts/Belarus.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'ADE';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ADE'), url('../assets/fonts/Ade-Display.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Graphik Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Graphik Regular'), url('../assets/fonts/Graphik.woff2') format('woff2');
+}
+
+body {
+    font-family: "Newsreader", serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+pre {
+    font-family: "Newsreader", serif;
+}
+
+h1, h2 {
+    font-weight: 500;
+    line-height: .9;
+    user-select: none;
+}
+
+a {
+    color: currentColor;
+}
+
+.story {
+    position: relative;
+    /* padding: 3rem calc(3vw + 3rem); */
+}
+
+.story p + p {
+    margin-top: .6em;
+}
+
+.para {
+    position: relative;
+    margin: 0 auto 3rem;
+    max-width: 90%;
+    text-align: justify;
+    /* background-image: url(../assets/images/paper_texture.avif); */
+    padding: 1em;
+
+    z-index: 10;
+}
+
+@keyframes openSesame {
+    0% {
+        background-position-x: 0%;
+    }
+    50% {
+        background-position-x: 100%;
+    }
+    100% {
+        background-position-x: 200%;
+    }
+}
+
+.postbox {
+    width: 30rem;
+    height: 30rem;
+    background-image: url(../assets/images/postbox_sprite.png);
+    background-size: cover;
+    background-position-x: 0%;
+
+    animation-name: openSesame;
+    animation-duration: 4s;
+    animation-timing-function: steps(2);
+    animation-iteration-count: infinite;
+}

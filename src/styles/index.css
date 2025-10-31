@@ -1,0 +1,64 @@
+body {
+    /* overflow: hidden; */
+}
+
+::selection {
+    background-color: rgb(190, 213, 231);
+    color: black;
+}
+
+.viewport {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.grid {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: max-content;
+    height: max-content;
+    /* border-right: 1px solid;
+    border-bottom: 1px solid; */
+    /* transform: translateX(-50%) translateY(-50%); */
+
+    background-color: rgb(170, 88, 236);
+    background-image: url(../assets/images/noise.svg);
+    background-size: 5%;
+}
+
+.grid__panel {
+    position: relative;
+    width: 50rem;
+    height: 35rem;
+    border-top: 1px solid yellow;
+    border-left: 1px solid yellow;
+    padding: 1em;
+}
+
+.grid__panel h1 {
+    font-size: 6rem;
+    font-family: 'Belarus';
+    text-transform: uppercase;
+    color: rgb(255, 238, 0);
+}
+
+.grid__panel p {
+    color: yellow;
+}
+
+.panel__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url(../assets/images/cover_img_gray_dim.png);
+    background-size: 15%, 25%;
+    mix-blend-mode: lighten;
+    z-index: -1;
+}
