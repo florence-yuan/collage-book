@@ -11,6 +11,8 @@
 
     --mauve: #be4f94;
     --teal: rgb(16, 207, 166);
+
+    font-size: 18px;
 }
 
 ::selection {
