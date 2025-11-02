@@ -11,12 +11,15 @@
 
     --mauve: #be4f94;
     --teal: rgb(16, 207, 166);
+    /* --bg-color: #c1d6cc; */
+    --bg-color: #fff;
 
     font-size: 18px;
 }
 
 ::selection {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgb(204, 227, 245);
+    color: black;
 }
 
 @font-face {
@@ -58,6 +61,59 @@ h1, h2 {
 
 a {
     color: currentColor;
+}
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3.3rem;
+    height: 3.3rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    backdrop-filter: invert(1);
+    z-index: 100;
+}
+
+.img-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    /* clip-path: inset(0 0 0 0); */
+    z-index: 30;
+}
+
+.modal__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    transform: scale(3);
+}
+
+.enlarged-img {
+    position: absolute;
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.enlarged-img > img {
+    position: relative;
+    max-width: 100%;
+}
+
+.enlarged-img > figcaption {
+    margin-top: 1em;
+    font-size: 1.2em;
+    text-align: center;
 }
 
 .story {
