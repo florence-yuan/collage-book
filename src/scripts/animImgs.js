@@ -36,9 +36,11 @@ function enlarge(img) {
         }, {autoAlpha: 1});
 
         gsap.fromTo(enlargedCaption, {
-            autoAlpha: 0
+            autoAlpha: 0,
+            yPercent: -200,
         }, {
-            autoAlpha: 1
+            autoAlpha: 1,
+            yPercent: 0,
         });
 
         Flip.from(minState, {
@@ -64,11 +66,11 @@ function decrease(img) {
 
     Flip.fit(imgModal, img, {scale: true, fitChild: enlargedImg});
 
-    gsap.to(modalBg, { autoAlpha: 0, duration: 0.4, ease: 'power1.inOut' });
-    gsap.to(enlargedCaption, { autoAlpha: 0, duration: 0.4, ease: 'power1.inOut' });
+    gsap.to(modalBg, { autoAlpha: 0, duration: 0.3, ease: 'power1.inOut' });
+    gsap.to(enlargedCaption, { autoAlpha: 0, duration: 0.3, ease: 'power1.inOut' });
 
     Flip.from(maxState, {
-        duration: 0.4,
+        duration: 0.3,
         scale: true,
     }).set(imgModal, {
         visibility: 'hidden'
