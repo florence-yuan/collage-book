@@ -9,7 +9,6 @@ const modalBg = imgModal.querySelector(".modal__bg");
 const enlarged = imgModal.querySelector(".enlarged-img");
 const enlargedImg = enlarged.querySelector("img");
 const enlargedCaption = enlarged.querySelector("figcaption");
-console.log(enlargedImg);
 
 function windowMin() {
     if (activeImg) {
