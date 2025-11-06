@@ -4,7 +4,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout pageTitle="Beginnings">
     <article class="story">
-        <div id="photo" />
         <div class="content">
             <p>
                 We have entered the doorway; we stand before a staircase
@@ -73,57 +72,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <style>
     article.story {
-        font-family: monospace;
         padding: 3rem var(--body-padding);
-        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white;
     }
 
     .story .content {
         max-width: 60rem;
-    }
-
-    #photo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-/*         width: 30rem;
-        height: 24rem; */
-        background-image: url(../assets/images/IMG_8655.JPG);
-        background-size: cover;
-        z-index: -1;
-    }
-
-    #photo::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-image: url(../assets/images/IMG_8655_super_exposed.png);
-        background-size: inherit;
-        transition: all 0.25s ease-in-out;
-    }
-
-    @keyframes bgFadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    #photo::before {
-        animation-name: bgFadeIn;
-        animation-duration: 3s;
-        animation-fill-mode: both;
     }
 </style>

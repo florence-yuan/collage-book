@@ -27,11 +27,11 @@ const collageCaptions = [
 		<!-- <img src="../assets/images/collages/1st_collage.png" alt="" /> -->
 		<div class="cover-gallery">
 			{[collage1, collage2, collage3].map((csrc, i) => (
-				<div class="gallery__img">
+				<div class="gallery__img hoverable img-wrapper">
 					<Image
 						src={csrc}
 						alt={collageCaptions[i]}
-						class="flip-img hoverable"
+						class="flip-img"
 					/>
 				</div>
 			))}

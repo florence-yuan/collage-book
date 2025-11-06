@@ -1,12 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import collage4 from "../assets/images/collages/collage4.png";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout pageTitle="Beginnings">
-	<article class="story">
-        <div id="postcard">
-            <div id="postcard__left">
-            <pre id="poem">
+    <article class="story">
+        <div class="img-wrapper">
+            <Image
+                src={collage4}
+                alt="Fly, my dear, but beware of gravity."
+                class="flip-img hoverable"
+            />
+        </div>
+        <pre
+            id="poem">
 Now and then it comes to me -
 This secret flower of mythology -
 Half entwined with long grapevines
@@ -18,26 +26,22 @@ In a world without order it rises
 Faithless in a time medieval
 <a href={import.meta.env.BASE_URL + "/monologue"}>I speak to myself</a>
         </pre>
-    </div>
-            <div id="postcard__right">
-                <div id="stamp" />
-            </div>
-    </div>
     </article>
 </BaseLayout>
 
 <style>
     article.story {
-        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-image: url(../assets/images/poem_img.jpg);
-        background-size: 30rem;
-        background-repeat: no-repeat;
-        background-position: 10% 10%;
+        gap: 2rem;
+    }
+
+    .flip-img {
+        max-width: 30rem;
+        height: auto;
     }
 
     #postcard {
@@ -58,7 +62,7 @@ Faithless in a time medieval
     }
 
     #postcard__left::after {
-        content: '';
+        content: "";
         display: block;
         width: 8px;
         height: 100%;

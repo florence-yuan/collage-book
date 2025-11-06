@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import collage5 from "../assets/images/collages/collage5.png";
+import { Image } from "astro:assets";
+---
+
+<BaseLayout pageTitle="Beginnings">
+    <article class="story">
+        <div class="img-wrapper">
+            <Image
+                src={collage5}
+                alt="From this earth, I grow."
+                class="flip-img hoverable"
+            />
+        </div>
+        <pre>
+A: Everything by principle can be appropriated.  All meaning can be reinvented; we have done it in art, in film, in architecture.  The emperors of the ancient world did the opposite – the only things they appropriated were history and prestige.  And yet for us, the past is just that – past.  Everything comes into the world as a ruin.  This is the key to understanding how the modern human thinks.
+B: You speak as if we have no sentiment, no attachment to the past.
+A: And we don’t.  We critique the Constructivists, but only because their collages propagated a meaning we do not accept and cannot tolerate.  In my view their crucial mistake was to attach much too fixed a purpose to their works, and then all the possibilities simply fell apart, became monotonous, dull, mundane.
+B: And what is a purpose that we do accept?
+A: Everything and nothing, and that is why the best artist must continually invent his own truths.
+B: There are no stable truths then?
+A: No more than there are stable geniuses.  The intellect is a work in progress, and so are truths.  We are truly Darwin’s creatures in that regard; we evolve.
+B: But isn’t it rather sad that our lives are continually relegated to a footnote – perhaps even a blank page – the moment they come into being?
+A: Very.  That is why the true artist is always melancholy; he is aware of his own limits.
+B: I had rather be happy.
+A: So would I.  That is why we must all go mad.  You frown.  Can you name an alternative?
+B: That we define a fundamental goodness; that we seek a genuine purity; that we look past stylistic conceits to a higher truth…
+A: And what is that truth?
+B: It is only a human intuition.  As such I cannot name it.
+A: Perhaps someone sometime in the future may give it a name.  By then we shall have become a jointed doll made up of parts that we do not understand.  I had rather remain sentient.
+B: For what?  For the infinitesimal instant before you become a relic, a ruin?
+A: No; for the eternity it takes to counter the absurdity of this world and at the end of it all, still say that we love it hopelessly.
+B: And in the meantime?  In the meantime?
+A: In the meantime I appoint myself the custodian of this vast museum of the world.  And now, ladies and gentlemen, the pressing question awaits: would you like to see the glass cases dedicated to Natural History, these painted frames and plaster pedestals from the exhibit of Fine Arts, or the Gallery of Strange and Miraculous Creatures With the Eyes of Flies and the Fingers of Aye-ayes?
+        </pre>
+    </article>
+</BaseLayout>
+
+<style>
+    .story {
+        max-width: 50rem;
+        margin: 0 auto 4rem;
+    }
+
+    .img-wrapper {
+        width: 90%;
+        margin: 0 auto 2rem;
+    }
+
+    pre {
+        max-width: 100%;
+        white-space: break-spaces;
+    }
+</style>
