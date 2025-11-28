@@ -1,0 +1,40 @@
+[
+    {
+        "src": "@images/collages/1st_collage.png",
+        "alt": "",
+        "id": 0
+    },
+    {
+        "src": "@images/collages/2nd_collage.png",
+        "alt": "",
+        "id": 1
+    },
+    {
+        "src": "@images/collages/3rd_collage.png",
+        "alt": "",
+        "href": "/urban_explorer",
+        "id": 2
+    },
+    {
+        "src": "@images/collages/collage4.png",
+        "alt": "",
+        "href": "/poem",
+        "id": 3
+    },
+    {
+        "src": "@images/collages/collage5.png",
+        "alt": "",
+        "href": "/conversation",
+        "id": 4
+    },
+    {
+        "src": "@images/color/6th_collage.png",
+        "alt": "",
+        "id": 5
+    },
+    {
+        "src": "@images/color/7th_collage.png",
+        "alt": "",
+        "id": 6
+    }
+]

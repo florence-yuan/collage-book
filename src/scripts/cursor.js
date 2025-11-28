@@ -10,7 +10,7 @@ window.addEventListener("mousemove", (e) => {
     yTo(e.clientY);
 });
 
-const hoverEles = [...document.links].concat([...document.querySelectorAll(".hoverable")]);
+const hoverEles = [...document.querySelectorAll("a")].concat([...document.querySelectorAll(".hoverable")]);
 hoverEles.forEach(ele => {
     ele.addEventListener("mouseenter", () => {
         // cursor.classList.add("hovered");

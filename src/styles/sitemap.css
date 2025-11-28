@@ -1,0 +1,51 @@
+body {
+    /* background-color: black; */
+}
+
+.grid {
+    max-width: 100%;
+    position: relative;
+}
+
+#sitemap {
+    position: relative;
+}
+
+#sitemap__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+#sitemap__overlay > a {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+#sitemap__overlay > a:hover {
+    opacity: 1;
+}
+
+p {
+    position: relative;
+    display: flex;
+    gap: 1em;
+    width: 35em;
+    max-width: 95%;
+    text-align: justify;
+    margin: 3em 5em 3em auto;
+}
+
+p::before {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background-image: url(../assets/icons/arrow_up.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-.75em);
+}

@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import diagram from "../assets/images/diagrams/diagram2.png";
+import { Image } from "astro:assets";
+---
+
+<BaseLayout pageTitle="One Way Street">
+        <Image
+            src={diagram}
+            alt="From this earth, I grow."
+            class="hoverable"
+            draggable={false}
+            style={{userSelect: 'none'}}
+        />
+</BaseLayout>

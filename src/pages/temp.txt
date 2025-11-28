@@ -1,0 +1,26 @@
+
+import collage1 from "@images/collages/1st_collage.png";
+import collage2 from "@images/collages/2nd_collage.png";
+import collage3 from "@images/collages/3rd_collage.png";
+import collage4 from "@images/collages/collage4.png";
+import collage5 from "@images/collages/collage5.png";
+import collage6 from "@images/color/6th_collage.png";
+import collage7 from "@images/color/7th_collage.png";
+import type { ImageMetadata } from 'astro';
+
+/* const collageImgs = [
+    { src: collage1, alt: "", href: "/" },
+    { src: collage2, alt: "", href: "/" },
+    { src: collage3, alt: "", href: "/urban_explorer" },
+    { src: collage4, alt: "", href: "/poem" },
+    { src: collage5, alt: "", href: "/conversation" },
+    { src: collage6, alt: "", href: "/" },
+    { src: collage7, alt: "", href: "/" },
+]; */
+// const originalImgs = Object.values(import.meta.glob<{ default: ImageMetadata }>('@images/original/*'));
+
+
+/* const gridImgAttrs = [
+    ...imgAttrs,
+    ...collageImgs
+]; */

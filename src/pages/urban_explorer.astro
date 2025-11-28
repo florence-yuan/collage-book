@@ -1,22 +1,27 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import collage3 from "../assets/images/collages/3rd_collage.png";
+import Image from "astro/components/Image.astro";
 ---
 
-<BaseLayout pageTitle="Beginnings">
+<BaseLayout pageTitle="Urban Explorer">
     <article class="story">
+        <div class="hoverable img-wrapper">
+            <Image src={collage3} alt='Interiors and exteriors.' class="flip-img" />
+        </div>
         <div class="content">
             <p>
                 We have entered the doorway; we stand before a staircase
                 enshrouded almost completely in this sullen, almost suffocating
                 darkness. Here we shall pause for our preliminary
-                investigations… Ah, behold these ancient bronze railings with their
-                heavy flakes of coppery rust, and if we move along here
+                investigations… Ah, behold these ancient bronze railings with
+                their heavy flakes of coppery rust, and if we move along here
                 there is what appears to be… My God! The paint has been scuffed
-                away here and here in the shape of <i>teeth marks</i>, almost as if
-                they have been made by wild animals or in any case an inhuman,
-                savage creature… What has happened in the confines of this
-                darkness, what secrets might it hold… And if we look closer here
-                you can see a dent, then another, in the handles of the
+                away here and here in the shape of <i>teeth marks</i>, almost as
+                if they have been made by wild animals or in any case an
+                inhuman, savage creature… What has happened in the confines of
+                this darkness, what secrets might it hold… And if we look closer
+                here you can see a dent, then another, in the handles of the
                 railings, that coupled with the absolute stillness of the
                 environment, seems to suggest a supernatural violence… Can it be
                 that the disturbed spirits of the dead have pervaded this
@@ -34,7 +39,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
             <p>
                 Goddammit, (indistinct) out! <i
-                    >(The light abruptly flicks out.)</i>
+                    >(The light abruptly flicks out.)</i
+                >
             </p>
 
             <p>
@@ -63,9 +69,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 yes, I daresay it must be, a stray that… Aaarrrgh!
             </p>
 
-            <p>
-                [Cuts to black.]
-            </p>
+            <p>[Cuts to black.]</p>
         </div>
     </article>
 </BaseLayout>
@@ -76,9 +80,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 4rem;
     }
 
     .story .content {
-        max-width: 60rem;
+        max-width: 50rem;
     }
 </style>
