@@ -2,13 +2,9 @@ body {
     /* background-color: black; */
 }
 
-.grid {
-    max-width: 100%;
-    position: relative;
-}
-
 #sitemap {
     position: relative;
+    margin-right: 1rem;
 }
 
 #sitemap__overlay {
