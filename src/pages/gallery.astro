@@ -16,11 +16,11 @@ const allImages = [...graphics, ...photos];
     <div class="grid">
         {
             allImages.map(({ data }) => (
-                <div class="img-wrapper grid__panel" ondragstart="return false">
+                <div class="img-wrapper grid__panel hoverable" ondragstart="return false">
                     <Image
                         src={data.src}
                         alt={data.alt}
-                        class="grid__img"
+                        class="grid__img flip-img"
                         usemap="sitemap-map"
                         id="sitemap"
                     />
