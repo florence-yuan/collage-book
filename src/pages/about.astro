@@ -3,4 +3,59 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout pageTitle="Beginnings" hasHeader={true}>
+    <article>
+        <p>An experimental collage of actual collages, fiction, poems, sound, and animations that reflects upon the surrealism of change in Shanghainese communities. Can be read as hypertext literature. Inspired by the pre-Surrealists and Surrealists. <a href="https://github.com/florence-yuan/collage-book">See code here.</a></p>
+        <hr />
+        <p>
+            There are plenty of odd things in Shanghai.  During the pandemic they were the grassy green walls and white hazmat suits and the identical square stations that dotted every corner of every street, where you could have your saliva samples taken in a few seconds.  About two years ago, as the pandemic was winding down, I was crossing an overpass when I saw a large red tow-truck clattering past, towing something that was too small and too regular-shaped to be a car.  It took a moment, but before the object went out of view entirely I realized that it was precisely one of those plastic-looking pandemic-era testing stations, speeding swiftly away toward a blue sky that promised the ultimate vanishing.
+        </p>
+        <p>
+            As I looked at that beautiful blue sky – and it was such a lovely
+            autumn day – I had the sudden thought that it was all too easy to
+            pretend that nothing had happened at all, that the pandemic had been
+            another fever dream, something concocted out of the stuff of our
+            collective imagination. It was almost mythical. Then I thought about
+            how many other myths there are in Shanghai – myths from different
+            eras, destroyed and broken down after different watershed moments in
+            the city’s history. The residues of these pandemics remain,
+            scattered and slathered between the shiny steel and new glass panes
+            that would much prefer to reflect them into oblivion. They are
+            evident in the naked concrete skeletons of buildings that have been
+            standing like unfinished sketches for half a decade, the staircases
+            that never lead anywhere but into the river, old facades that stand
+            one-inch thick, like paper-thin memorials to the buildings that used
+            to be attached to their back. I can go on in this vein, about sign
+            boards and barren land and creaky bridges no one uses anymore, but
+            the point is that they are all ruins now. Ruins without history. Or
+            at least, without history that we remember.
+        </p>
+        <p>
+            That was the idea that stuck with me the most when I read Walter Benjamin, “Everything comes into the world as a ruin.”  I had read something similar somewhere else, I remembered, when I was trying to decipher the Surrealist artist Max Ernst’s enigmatic collage book, “The Hundred Headless Woman”.  Ernst took cut-outs from Victorian prints, pieced them together in bizarre fashions, and then labeled them with even stranger aphorisms.  In his preface, Andre Breton exalted the free-associative power we possess in dreams, and drew a parallel to the act of assigning old drawings new meanings and new stories – or as I’ve come to call it, re-storification.
+        </p>
+        <p>What is this re-storification in 21st century Shanghai?  A tool of propaganda, most likely.  An act of covering up and bending into new shape what cannot be so easily covered up.  It’s the red tow-truck that pulls away every single covid testing station without a notice.  I do not mourn the testing stations.  I mourn the history we shall never see in print, never see memorialized, never see reflected upon, written about, disseminated, discussed.  I mourn the transference of what belonged to the public sphere to shuttered private spaces that have soon become like dreams, in which we must take astonishing leaps of the imagination in order to reach the right conclusions.  I mourn these conclusions themselves, for in a couple of years we may not reach them at all.  Already we have lost the conclusions we drew about a past era, all these old alleyways and apartment blocks and their residents, the debate we had over the ethics of forced relocation and radical modernization.  A new story has entered our conscience, but it’s not authored by individuals, artists, writers, as Andre Breton and Max Ernst no doubt hoped for – perhaps it never has been.</p>
+        <p>I don’t think this re-storification only goes on in Shanghai.  But we must all start from somewhere, and I’ve lived in Shanghai all my life.  Its storied streets hold the stories of my own childhood.  And if I had to fashion a new ghost that the gods would make haunt these very streets with the persistence of nostalgia, I would fashion it out of street signs and gutters and balconies and people I know.  My ghost is a ghost of subversion.  He never vanishes, unlike the bricks and concrete and even the testing stations under literal and metaphorical bulldozers.  But he is just as strange, perhaps even stranger, because he embodies all the surrealism, unreality, paradoxes, and enigmas of these times we live in.</p>
+        <p>And because ghosts aren’t real – <i>aren’t</i> they? – I decided to have a little fun after all while creating the collages and fictional narratives.  The Surrealists never said that freeing one’s imagination and inventing new meanings weren’t fun.  That old melancholic Walter Benjamin wrote of Baudelaire’s city-strolling flaneur, “No matter what trail the flaneur may follow, every one of them will lead him to a crime.”  Indeed, this is the truth of our modern cities.  They teem with crime, and the one who walks them conscientiously must himself be a criminal.  Had I attempted to follow that tow-truck to its curious end, I would no doubt have been designated a legal criminal.  That is the thrill of the chase.  Ladies and gentlemen, <a href={import.meta.env.BASE_URL + "/sitemap"}>the game is afoot</a>.</p>
+    </article>
 </BaseLayout>
+
+<style>
+    article {
+        width: 50rem;
+        max-width: 90%;
+        margin: 0 auto 4rem;
+    }
+
+    article > p + p {
+        margin-top: .75em;
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        background-image: url(../assets/images/textures/line__hor.png);
+        background-repeat: repeat-x;
+        background-position: center;
+        background-size: 5%;
+        margin: 1.5em 0;
+    }
+</style>
