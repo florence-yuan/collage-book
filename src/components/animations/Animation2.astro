@@ -1,0 +1,62 @@
+<div id="anim2" class="animation-frame">
+    <div id="leg_left" />
+    <div id="wheel_front" />
+    <div id="wheel_rear" />
+    <div id="bg" />
+    <div id="leg_right" />
+    <div class="motion-paths">
+        <svg>
+        <ellipse id="motion-circle" cx="0" cy="0" rx="10" ry="10" pathLength="1" /> </svg>
+    </div>
+</div>
+
+<style>
+    .animation-frame {
+        height: 36rem;
+        aspect-ratio: 412 / 745;
+    }
+
+    .animation-frame > * {
+        background-size: contain;
+    }
+
+    #bg {
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        background-image: url(../../assets/images/animations/anim2/bg.png);
+    }
+
+    #wheel_front {
+        left: 23%;
+        bottom: 0;
+        width: 30%;
+        height: 23%;
+        background-image: url(../../assets/images/animations/anim2/wheel_front.png);
+    }
+
+    #wheel_rear {
+        right: 11.5%;
+        bottom: 7.5%;
+        width: 25%;
+        height: 20%;
+        background-image: url(../../assets/images/animations/anim2/wheel_rear.png);
+    }
+
+    #leg_left {
+        left: 14%;
+        bottom: 12%;
+        width: 35%;
+        height: 29%;
+        background-image: url(../../assets/images/animations/anim2/leg_left.png);
+    }
+
+    #leg_right {
+        right: 34%;
+        bottom: 3%;
+        width: 33.5%;
+        height: 33%;
+        background-image: url(../../assets/images/animations/anim2/leg_right.png);
+    }
+</style>

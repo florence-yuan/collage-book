@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Image from "astro/components/Image.astro";
+
+const imgs = Object.values(
+    import.meta.glob("../assets/images/handwriting/*.png"),
+);
+---
+
+<BaseLayout pageTitle="Handwriting">
+    <div class="gallery">
+        {
+            imgs.map((img) => (
+                <div class="img-wrapper">
+                    <Image src={img()} alt="" />
+                </div>
+            ))
+        }
+    </div>
+</BaseLayout>
+
+<style>
+    .gallery {
+        margin: 3rem;
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .img-wrapper {
+        max-width: 35rem;
+    }
+
+    .img-wrapper img {
+        width: auto;
+        max-height: 40rem;
+    }
+</style>

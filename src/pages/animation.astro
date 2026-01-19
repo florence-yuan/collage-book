@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Animation1 from "../components/animations/Animation1.astro";
+import Animation2 from "../components/animations/Animation2.astro";
+
+import "../styles/animations.css";
+---
+
+<BaseLayout pageTitle="Animations">
+    <div class="anim-flex">
+        <Animation1 />
+        <Animation2 />
+    </div>
+    <p>Hover to play</p>
+</BaseLayout>
+
+<script>
+    import "../scripts/animations";
+</script>

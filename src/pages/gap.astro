@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Image from "astro/components/Image.astro";
+import HeroImg from "../assets/images/index/hero.png"
+---
+
+<BaseLayout pageTitle="Gap">
+    <div class="container">
+    <Image src={HeroImg} alt="" class="hero-img"></Image>
+</div>
+</BaseLayout>
+
+<style>
+    .container {
+        width: 100%;
+        height: 100%;
+        /* background-color: rgb(133, 243, 243); */
+        /* background-image: url(../assets/images/noise.svg); */
+        background-size: 30%;
+    }
+
+    .hero-img {
+        margin: 0 auto;
+        height: 100%;
+    }
+</style>

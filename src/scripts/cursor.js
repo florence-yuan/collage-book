@@ -23,3 +23,35 @@ hoverEles.forEach(ele => {
 });
 
 console.log(hoverEles)
+
+const eyeTl = gsap.timeline({
+    repeat: -1,
+    repeatDelay: 2,
+    // yoyo: true,
+    defaults: {
+        duration: 0.3,
+        ease: "power1.in"
+    }
+});
+gsap.set(".cursor #pupil", { x: -2, y: -0.6 });
+eyeTl
+.to(".cursor #pupil", { x: -2, y: -0.6 })
+.to(".cursor #pupil", { x: 2, y: 0 }, "+=2")
+.to(".cursor svg", {scaleY: 0.1, ease: "power2.in"}, "+")
+.to(".cursor #eye-frame", {fill: 'black'}, "<+=0.1")
+.to(".cursor #iris", {fill: 'black'}, "<+=0.1")
+.to(".cursor #eye-frame", {fill: 'transparent'}, "+=0.3")
+.to(".cursor #iris", {fill: 'rgba(255, 255, 255, 0.6)'}, "<")
+.to(".cursor svg", {scaleY: 1, ease: "power2.out"}, "<")
+.to(".cursor #pupil", { x: -1, y: 0.3 }, "+=2")
+.to(".cursor #pupil", { x: 1.5, y: 0.4 }, "+=2")
+.to(".cursor #pupil", { x: -2, y: -0.6 }, "+=2");
+
+export const eyeAnim = {
+    play: () => {
+        eyeTl.play();
+    },
+    pause: () => {
+        eyeTl.pause();
+    }
+}

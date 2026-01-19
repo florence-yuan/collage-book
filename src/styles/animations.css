@@ -1,0 +1,25 @@
+.anim-flex {
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.animation-frame {
+    position: relative;
+    width: 24rem;
+    height: 36rem;
+    /* border: 1px solid black; */
+    background-image: url(../assets/images/textures/paper_texture.avif);
+}
+
+.animation-frame > * {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+p {
+    width: max-content;
+    margin: 0 auto;
+}

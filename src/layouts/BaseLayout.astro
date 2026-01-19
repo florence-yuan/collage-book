@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro";
+import EyeIcon from "../assets/icons/eye2.svg"
 
 const { pageTitle, hasHeader } = Astro.props;
 ---
@@ -30,7 +31,9 @@ const { pageTitle, hasHeader } = Astro.props;
                     <figcaption></figcaption>
                 </figure>
             </div>
-            <div class="cursor" />
+            <div class="cursor">
+                <EyeIcon width={60} height={60} />
+            </div>
         </main>
 
         <script></script>
