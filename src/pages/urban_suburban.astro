@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const blocks = [
+    "They say, “it’s a city of light”; they don’t say,\
+            “traffic lights all night”.",
+    "In the great human traffic the light keeps flashing red.",
+    "Everyone can see into someone else’s window; tableau vivants less than ideal.",
+    "On the streets we scrutinize medicine bottles and maneki nekos sitting beside smiling buddhas, but then the shutters go up and we see glossy couture bags sitting on glass cases instead.  Above them neon letters spell out French brands that have been translated into incomprehensible Chinese.",
+    "Words are collected by the armful, though only the wealthy can afford branded shopping bags.",
+    "Dip back down to what one might call the salt of the earth, and print dissolves; it’s nothing, it’s the glory of nothingness.",
+    "The buddha’s name is spoken not written.",
+    "Everywhere dialect is brought out like the ant colony’s scent or the Shibboleth, and when it doesn’t receive an echo it drives cracks through the earth."
+];
+---
+
+<BaseLayout pageTitle="Urban v Suburban">
+    <div class="article">
+        <div class="left">
+            <div class="grid">
+                        <div class="block">
+                <p>
+                    <i>Urban Shanghai.</i>
+                </p>
+                </div>
+                {
+                    blocks.map((block) => (
+                        <div class="block">
+                            <p>{block}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+        <div class="right">
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    .article {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+
+    .left {
+        flex: 1;
+        min-width: 50rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background-color: rgb(37, 37, 37);
+        background-image: url(../assets/images/noise.svg);
+        background-size: 30%;
+    }
+
+    @media (max-width: 55rem) {
+        .left {
+            min-width: 100%;
+        }
+    }
+
+    .right {
+        flex: 1;
+        height: 100%;
+        background-image: url(../assets/images/cover_img_gray.png);
+        background-size: clamp(10rem, 15%, 15rem);
+    }
+
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 20rem);
+        gap: 5rem 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block {
+        width: 20rem;
+        background-color: white;
+    }
+
+    .block:not(:first-child) {
+
+        padding: 0 .5em;
+    }
+</style>
